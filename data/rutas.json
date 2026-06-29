@@ -1,0 +1,136 @@
+[
+  {
+    "id": "R-001",
+    "numeroRuta": "400-A",
+    "nombreRuta": "Alajuela - San José por Pista",
+    "categoria": "Interurbana",
+    "estado": "Regular",
+    "descripcion": "Servicio directo por la Autopista General Cañas hacia la Terminal de San José.",
+    "paradas": [
+      { "nombre": "Terminal Central Alajuela", "tiempoEstimado": 0 },
+      { "nombre": "Hospital San Rafael", "tiempoEstimado": 10 },
+      { "nombre": "Aeropuerto Juan Santamaría", "tiempoEstimado": 15 },
+      { "nombre": "Terminal San José", "tiempoEstimado": 45 }
+    ]
+  },
+  {
+    "id": "R-002",
+    "numeroRuta": "400-B",
+    "nombreRuta": "Alajuela - San José por Heredia",
+    "categoria": "Interurbana",
+    "estado": "Demorado",
+    "descripcion": "Ruta alterna pasando por San Joaquín y Heredia Centro hacia San José.",
+    "paradas": [
+      { "nombre": "Terminal Central Alajuela", "tiempoEstimado": 0 },
+      { "nombre": "San Joaquín de Flores", "tiempoEstimado": 20 },
+      { "nombre": "Paseo de las Flores", "tiempoEstimado": 35 },
+      { "nombre": "Terminal San José", "tiempoEstimado": 65 }
+    ]
+  },
+  {
+    "id": "R-003",
+    "numeroRuta": "200",
+    "nombreRuta": "San José - Heredia Directo",
+    "categoria": "Interurbana",
+    "estado": "Regular",
+    "descripcion": "Conexión ágil entre el centro de Heredia y la capital por Tibás.",
+    "paradas": [
+      { "nombre": "Terminal Heredia Centro", "tiempoEstimado": 0 },
+      { "nombre": "Plaza Bratsi", "tiempoEstimado": 8 },
+      { "nombre": "Santo Domingo", "tiempoEstimado": 18 },
+      { "nombre": "Terminal San José", "tiempoEstimado": 35 }
+    ]
+  },
+  {
+    "id": "R-004",
+    "numeroRuta": "401",
+    "nombreRuta": "Alajuela - Heredia por San Joaquín",
+    "categoria": "Sectorial",
+    "estado": "Regular",
+    "descripcion": "Ruta tradicional que conecta los centros de ambas provincias.",
+    "paradas": [
+      { "nombre": "Terminal Alajuela", "tiempoEstimado": 0 },
+      { "nombre": "Rio Segundo", "tiempoEstimado": 10 },
+      { "nombre": "San Joaquín", "tiempoEstimado": 22 },
+      { "nombre": "Universidad Nacional (UNA)", "tiempoEstimado": 35 }
+    ]
+  },
+  {
+    "id": "R-005",
+    "numeroRuta": "10-U",
+    "nombreRuta": "Urbana Alajuela - El Coyol",
+    "categoria": "Urbana",
+    "estado": "Fuera de Horario",
+    "descripcion": "Servicio local enfocado en la zona franca y sectores residenciales aledaños.",
+    "paradas": [
+      { "nombre": "Terminal Alajuela", "tiempoEstimado": 0 },
+      { "nombre": "La Agonía", "tiempoEstimado": 5 },
+      { "nombre": "Zona Franca Coyol", "tiempoEstimado": 20 }
+    ]
+  },
+  {
+    "id": "R-006",
+    "numeroRuta": "422",
+    "nombreRuta": "Alajuela - San Antonio de Tejar",
+    "categoria": "Urbana",
+    "estado": "Regular",
+    "descripcion": "Ruta corta para residentes del sector oeste de Alajuela.",
+    "paradas": [
+      { "nombre": "Terminal Alajuela", "tiempoEstimado": 0 },
+      { "nombre": "Plaza Feria", "tiempoEstimado": 12 },
+      { "nombre": "San Antonio Abajo", "tiempoEstimado": 20 }
+    ]
+  },
+  {
+    "id": "R-007",
+    "numeroRuta": "301",
+    "nombreRuta": "San José - Cartago Directo",
+    "categoria": "Interurbana",
+    "estado": "Regular",
+    "descripcion": "Servicio interprovincial de alta frecuencia por la autopista Florencio del Castillo.",
+    "paradas": [
+      { "nombre": "Terminal San José", "tiempoEstimado": 0 },
+      { "nombre": "San Pedro (UCR)", "tiempoEstimado": 15 },
+      { "nombre": "Terminal Cartago Centro", "tiempoEstimado": 45 }
+    ]
+  },
+  {
+    "id": "R-008",
+    "numeroRuta": "433",
+    "nombreRuta": "Alajuela - Fraijanes Poás",
+    "categoria": "Sectorial",
+    "estado": "Demorado",
+    "descripcion": "Ruta de montaña hacia las faldas del Volcán Poás y zonas turísticas.",
+    "paradas": [
+      { "nombre": "Terminal Alajuela", "tiempoEstimado": 0 },
+      { "nombre": "Carrizal", "tiempoEstimado": 25 },
+      { "nombre": "Laguna de Fraijanes", "tiempoEstimado": 45 }
+    ]
+  },
+  {
+    "id": "R-009",
+    "numeroRuta": "02-A",
+    "nombreRuta": "San José - Escazú por Pista",
+    "categoria": "Sectorial",
+    "estado": "Regular",
+    "descripcion": "Conexión rápida desde la Sabana ingresando por la ruta 27.",
+    "paradas": [
+      { "nombre": "Terminal San José", "tiempoEstimado": 0 },
+      { "nombre": "La Sabana", "tiempoEstimado": 10 },
+      { "nombre": "Multiplaza Escazú", "tiempoEstimado": 25 }
+    ]
+  },
+  {
+    "id": "R-010",
+    "numeroRuta": "500",
+    "nombreRuta": "San José - San Pedro - Curridabat",
+    "categoria": "Urbana",
+    "estado": "Regular",
+    "descripcion": "Troncal este de alta densidad estudiantil y comercial.",
+    "paradas": [
+      { "nombre": "Terminal San José", "tiempoEstimado": 0 },
+      { "nombre": "Fuente de la Hispanidad", "tiempoEstimado": 12 },
+      { "nombre": "Plaza del Sol", "tiempoEstimado": 22 }
+    ]
+  }
+]

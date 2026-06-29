@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RouteView – Catálogo de Rutas</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header id="navbar">
+    <div class="nav-contenido">
+
+      <a href="index.html" class="logo" aria-label="Inicio de RouteView">
+        🚌 Route<span>View</span>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="rutas.html" class="active">Rutas</a></li>
+          <li><a href="registro.html">Mis Rutas</a></li>
+        </ul>
+      </nav>
+
+      <button
+        id="hamburger"
+        class="hamburger"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="menu-movil"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+    <div id="menu-movil" class="menu-movil" role="navigation" aria-label="Menú móvil">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="rutas.html" class="active">Rutas</a></li>
+        <li><a href="registro.html">Mis Rutas</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="contenedor-principal" style="padding: 120px 20px 60px; min-height: 80vh;">
+    
+    <section class="seccion-catalogo contenedor">
+      <div class="bloque-encabezado text-center" style="margin-bottom: 40px;">
+        <h1>Explorar Rutas de Autobuses</h1>
+        <p>Encuentra tu línea de bus, consulta los tiempos estimados de llegada en tiempo real y añade paradas a tus favoritos.</p>
+      </div>
+
+      <div class="barra-filtros" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center;">
+        
+        <div style="flex: 1; min-width: 280px;">
+          <label for="input-busqueda" style="display: block; font-weight: bold; margin-bottom: 6px; color: #555; font-size: 0.9rem;">¿A dónde vas?</label>
+          <input 
+            type="search" 
+            id="input-busqueda" 
+            placeholder="Buscar por número de ruta o parada (ej. UTN, Alajuela)..." 
+            style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1rem;"
+          >
+        </div>
+
+        <div style="min-width: 180px;">
+          <label for="filtro-categoria" style="display: block; font-weight: bold; margin-bottom: 6px; color: #555; font-size: 0.9rem;">Categoría:</label>
+          <select id="filtro-categoria" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; background-color: #fff; font-size: 1rem;">
+            <option value="todos">Todas las categorías</option>
+            <option value="Regular">Servicio Regular</option>
+            <option value="Express">Servicio Express</option>
+            <option value="Interlineas">Interlíneas</option>
+          </select>
+        </div>
+
+        <div style="min-width: 180px;">
+          <label for="filtro-estado" style="display: block; font-weight: bold; margin-bottom: 6px; color: #555; font-size: 0.9rem;">Estado del servicio:</label>
+          <select id="filtro-estado" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; background-color: #fff; font-size: 1rem;">
+            <option value="todos">Todos los estados</option>
+            <option value="Activo">Activo (Normal)</option>
+            <option value="Demorado">Demorado / Tránsito pesado</option>
+            <option value="Fuera de Horario">Fuera de Horario</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div id="contenedor-catalogo-rutas" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+        
+        <div class="cargando-datos" style="grid-column: 1 / -1; text-align: center; color: #666; padding: 40px;">
+          <p style="font-size: 1.2rem;">Cargando catálogo de rutas actualizadas...</p>
+        </div>
+
+      </div>
+
+      <div id="sin-resultados" style="display: none; text-align: center; padding: 6px 20px; color: #777; margin-top: 20px;">
+        <p style="font-size: 3rem; margin-bottom: 10px;">🔍</p>
+        <p style="font-size: 1.2rem; font-weight: bold;">No se encontraron rutas que coincidan con los filtros seleccionados.</p>
+        <p>Intenta cambiar los términos de búsqueda o limpiar los filtros.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="contenedor footer-contenido">
+      <div class="footer-marca">
+        <p class="logo">🚌 Route<span>View</span></p>
+        <p>Movilidad urbana inteligente para todos.</p>
+      </div>
+
+      <nav aria-label="Links del pie de página">
+        <h4>Navegación</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="rutas.html">Rutas</a></li>
+          <li><a href="registro.html">Mis Rutas</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contacto">
+        <h4>Contacto</h4>
+        <p>📧 hola@routeview.app</p>
+        <p>📍 San José, Costa Rica</p>
+      </div>
+    </div>
+    <div class="footer-creditos text-center">
+      <p>&copy; 2026 RouteView. Proyecto de Curso - UTN Sede Central. Desarrollado por Mía & David.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

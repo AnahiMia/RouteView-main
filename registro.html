@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RouteView – Registro de Rutas Favoritas</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header id="navbar">
+    <div class="nav-contenido">
+
+      <a href="index.html" class="logo" aria-label="Inicio de RouteView">
+        🚌 Route<span>View</span>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="rutas.html">Rutas</a></li>
+          <li><a href="registro.html" class="active">Mis Rutas</a></li>
+        </ul>
+      </nav>
+
+      <button
+        id="hamburger"
+        class="hamburger"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="menu-movil"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+    <div id="menu-movil" class="menu-movil" role="navigation" aria-label="Menú móvil">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="rutas.html">Rutas</a></li>
+        <li><a href="registro.html" class="active">Mis Rutas</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="contenedor-principal" style="padding: 120px 20px 60px; min-height: 80vh;">
+    
+    <section class="seccion-registro contenedor">
+      <div class="bloque-encabezado text-center" style="margin-bottom: 40px;">
+        <h1>Personaliza tus Rutas</h1>
+        <p>Registra y administra las rutas y paradas que utilizas frecuentemente para realizar un seguimiento rápido.</p>
+      </div>
+
+      <div id="mensaje-exito" class="alerta-exito" role="alert" style="display: none; margin-bottom: 20px; padding: 15px; background-color: #d4edda; color: #155724; border-radius: 5px; font-weight: bold; text-align: center;">
+        ¡Ruta registrada correctamente en tus favoritos!
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: start; text-align: left;">
+        
+        <div class="tarjeta-formulario" style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+          <h2 style="margin-bottom: 20px; font-size: 1.5rem; color: #333;">Registrar una Ruta Favorita</h2>
+          
+          <form id="formulario-ruta" novalidate>
+            
+            <div class="grupo-formulario" style="margin-bottom: 20px;">
+              <label for="alias-ruta" style="display: block; font-weight: bold; margin-bottom: 8px; color: #555;">Nombre o Alias de la Ruta:</label>
+              <input type="text" id="alias-ruta" placeholder="Ej. Bus de la U / Trabajo" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" required>
+              <span id="error-alias" class="error-msg" style="color: #dc3545; font-size: 0.85rem; display: block; margin-top: 5px; font-weight: 500;"></span>
+            </div>
+
+            <div class="grupo-formulario" style="margin-bottom: 20px;">
+              <label for="nombre-bus" style="display: block; font-weight: bold; margin-bottom: 8px; color: #555;">Número o Nombre de la Línea:</label>
+              <input type="text" id="nombre-bus" placeholder="Ej. Ruta 400 - Alajuela por Heredia" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" required>
+              <span id="error-bus" class="error-msg" style="color: #dc3545; font-size: 0.85rem; display: block; margin-top: 5px; font-weight: 500;"></span>
+            </div>
+
+            <div class="grupo-formulario" style="margin-bottom: 20px;">
+              <label for="categoria-ruta" style="display: block; font-weight: bold; margin-bottom: 8px; color: #555;">Categoría del Servicio:</label>
+              <select id="categoria-ruta" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; background-color: #fff;" required>
+                <option value="">-- Seleccione una categoría --</option>
+                <option value="Regular">Servicio Regular</option>
+                <option value="Express">Servicio Express / Directo</option>
+                <option value="Interlineas">Interlíneas</option>
+              </select>
+              <span id="error-categoria" class="error-msg" style="color: #dc3545; font-size: 0.85rem; display: block; margin-top: 5px; font-weight: 500;"></span>
+            </div>
+
+            <div class="grupo-formulario" style="margin-bottom: 20px;">
+              <label for="parada-usuario" style="display: block; font-weight: bold; margin-bottom: 8px; color: #555;">Tu Parada de Abordaje:</label>
+              <input type="text" id="parada-usuario" placeholder="Ej. Frente a Entrada UTN Sede Central" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" required>
+              <span id="error-parada" class="error-msg" style="color: #dc3545; font-size: 0.85rem; display: block; margin-top: 5px; font-weight: 500;"></span>
+            </div>
+
+            <div class="grupo-formulario" style="margin-bottom: 25px;">
+              <label for="descripcion-ruta" style="display: block; font-weight: bold; margin-bottom: 8px; color: #555;">Notas o Frecuencia Horaria:</label>
+              <textarea id="descripcion-ruta" rows="3" placeholder="Ej. Tomar antes de las 7:00 AM para llegar a tiempo a clases..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; resize: vertical; box-sizing: border-box;" required></textarea>
+              <span id="error-descripcion" class="error-msg" style="color: #dc3545; font-size: 0.85rem; display: block; margin-top: 5px; font-weight: 500;"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primario" style="width: 100%; border: none; cursor: pointer; padding: 12px; font-weight: bold;">
+              Guardar en Mis Rutas
+            </button>
+
+          </form>
+        </div>
+
+        <div class="tarjeta-registros" style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); min-height: 400px; display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+            <h2 style="font-size: 1.5rem; color: #333; margin: 0;">Mis Rutas Guardadas</h2>
+            <button id="btn-limpiar" class="btn" style="background-color: #6c757d; color: white; padding: 6px 12px; border: none; border-radius: 4px; cursor: pointer; font-size: 0.85rem;">
+              Limpiar Todo
+            </button>
+          </div>
+
+          <div id="contenedor-rutas-favoritas" style="flex-grow: 1;">
+            <div class="estado-vacio" style="text-align: center; color: #777; padding: 40px 20px;">
+              <p style="font-size: 3rem; margin-bottom: 10px;">📌</p>
+              <p>Aún no has registrado rutas personalizadas.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="contenedor footer-contenido">
+      <div class="footer-marca">
+        <p class="logo">🚌 Route<span>View</span></p>
+        <p>Movilidad urbana inteligente para todos.</p>
+      </div>
+
+      <nav aria-label="Links del pie de página">
+        <h4>Navegación</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="rutas.html">Rutas</a></li>
+          <li><a href="registro.html">Mis Rutas</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contacto">
+        <h4>Contacto</h4>
+        <p>📧 hola@routeview.app</p>
+        <p>📍 San José, Costa Rica</p>
+      </div>
+    </div>
+    <div class="footer-creditos text-center">
+      <p>&copy; 2026 RouteView. Proyecto de Curso - UTN Sede Central. Desarrollado por Mía & David.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
