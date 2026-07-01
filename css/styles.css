@@ -19,6 +19,7 @@
   --gris-claro:#F0F4F8;
   --gris-medio:#DDE6EF;
   --gris-texto:#4A6782;
+  --azul-logo:#0044aa;
   --radio:     12px;
   --sombra:    0 4px 16px rgba(0, 0, 0, 0.1);
 }
@@ -65,12 +66,12 @@ body {
 }
 
 .btn-primario {
-  background: var(--naranja);
+  background: var(--verde);
   color: var(--blanco);
 }
 
 .btn-primario:hover {
-  background: #e05820;
+  background: #157b5e;
 }
 
 .btn-secundario {
@@ -130,7 +131,7 @@ body {
 }
 
 .logo span {
-  color: var(--naranja);
+  color: var(--verde);
 }
 
 /* Links de escritorio */
@@ -253,8 +254,8 @@ body {
   margin-bottom: 18px;
 }
 
-.texto-naranja {
-  color: var(--naranja);
+.texto-verde {
+  color: var(--verde);
 }
 
 .hero-contenido > p {
@@ -434,7 +435,7 @@ body {
 
 .dato-card {
   background: var(--blanco);
-  border-left: 4px solid var(--naranja);
+  border-left: 4px solid var(--verde);
   border-radius: 8px;
   padding: 16px 20px;
   box-shadow: var(--sombra);
@@ -444,7 +445,7 @@ body {
   display: block;
   font-size: 36px;
   font-weight: bold;
-  color: var(--naranja);
+  color: var(--verde);
   line-height: 1.1;
 }
 
@@ -528,7 +529,7 @@ body {
 
 .funcion-card:hover {
   box-shadow: var(--sombra);
-  border-color: var(--naranja);
+  border-color: var(--verde);
 }
 
 .funcion-icono {
@@ -664,7 +665,7 @@ body {
 }
 
 .paso-numero {
-  background: var(--naranja);
+  background: var(--verde);
   color: var(--blanco);
   font-size: 20px;
   font-weight: bold;
