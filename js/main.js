@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             ${listaParadas}
                         </ul>
                     </div>
-                    <button class="btn-agregar-fav" data-id="${ruta.id}" style="background: #ff5722; color: white; border: none; padding: 10px; border-radius: 4px; font-weight: bold; cursor: pointer; width: 100%;">
+                    <button class="btn-agregar-fav" data-id="${ruta.id}" style="background: #00C48C; color: white; border: none; padding: 10px; border-radius: 4px; font-weight: bold; cursor: pointer; width: 100%;">
                         ⭐ Añadir a Favoritos
                     </button>
                 `;
@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.style = 'background: #f8f9fa; border: 1px solid #e2e8f0; padding: 15px; border-radius: 6px; margin-bottom: 15px; position: relative;';
 
                 item.innerHTML = `
-                    <h3 style="margin: 0 0 5px 0; color: #ff5722; font-size: 1.15rem;">${fav.alias}</h3>
+                    <h3 style="margin: 0 0 5px 0; color: #00C48C; font-size: 1.15rem;">${fav.alias}</h3>
                     <p style="margin: 0 0 5px 0; font-weight: bold; font-size: 0.9rem;">🚌 ${fav.linea} <span style="font-size:0.75rem; font-weight:normal; background:#cbd5e1; padding: 2px 6px; border-radius:3px; margin-left:5px;">${fav.categoria}</span></p>
                     <p style="margin: 0 0 8px 0; font-size: 0.85rem; color: #475569;">📍 <strong>Abordaje:</strong> ${fav.parada}</p>
                     <p style="margin: 0; font-size: 0.85rem; color: #64748b; font-style: italic;">"${fav.descripcion}"</p>
