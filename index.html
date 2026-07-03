@@ -83,10 +83,12 @@
           <div class="mapa-titulo"> Mapa en vivo</div>
           <div class="mapa-rutas">
             <div class="linea-ruta naranja"></div>
+            <div class="bus-icono bus-1"><img src="../images/icon-bus.svg" alt=""></div>
             <div class="linea-ruta verde"></div>
+             <div class="bus-icono bus-2"><img src="../images/icon-bus.svg" alt=""></div>
             <div class="linea-ruta azul"></div>
-            <div class="bus-icono bus-1">🚌</div>
-            <div class="bus-icono bus-2">🚌</div>
+            <div class="bus-icono bus-3"><img src="../images/icon-bus.svg" alt=""></div>
+
           </div>
           <div class="mapa-leyenda">
             <span class="punto naranja"></span> Ruta 42
@@ -134,7 +136,7 @@
               <p>tiempo promedio de espera sin información</p>
             </div>
             <div class="dato-card">
-              <span class="dato-numero">0</span>
+              <span class="dato-numero">1</span>
               <p>apps oficiales de seguimiento en tiempo real</p>
             </div>
           </div>
@@ -265,29 +267,6 @@
     </section>
 
     <!-- ==========================================
-         RUTAS DESTACADAS (cargadas desde JSON)
-    =========================================== -->
-    <section class="seccion-rutas-destacadas" aria-labelledby="titulo-rutas">
-      <div class="contenedor">
-
-        <h2 id="titulo-rutas">Rutas más usadas</h2>
-        <p class="subtitulo-seccion">
-          Estas son algunas de las rutas activas que puedes consultar en RouteView.
-        </p>
-
-        <!-- Este contenedor se llena dinámicamente con JS desde rutas.json -->
-        <div id="contenedor-rutas" class="rutas-grid" aria-live="polite">
-          <p class="cargando">Cargando rutas...</p>
-        </div>
-
-        <div class="centrado">
-          <a href="rutas.html" class="btn btn-primario">Ver todas las rutas</a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================
          CÓMO EMPEZAR (Flujo de uso)
     =========================================== -->
     <section class="seccion-como" aria-labelledby="titulo-como">
@@ -334,7 +313,8 @@
   <footer>
     <div class="contenedor footer-contenido">
       <div class="footer-marca">
-        <p class="logo">🚌 Route<span>View</span></p>
+        <p class="logo">
+          <img src="../images/3logo.png" alt="">Route<span>View</span></p>
         <p>Movilidad urbana inteligente para todos.</p>
       </div>
 
@@ -349,13 +329,16 @@
 
       <div class="footer-contacto">
         <h4>Contacto</h4>
-        <p>📧 hola@routeview.app</p>
-        <p>📍 San José, Costa Rica</p>
+       <p>routeview@rview.app</p>
+        <p>Alajuela, Costa Rica</p>
       </div>
     </div>
 
     <div class="footer-inferior">
-      <p>© 2025 RouteView – Hecho en Costa Rica 🇨🇷</p>
+      <p>© 2026 RouteView – Hecho en Costa Rica 🇨🇷</p>
+    </div>
+    <div class="footer-creditos text-center">
+      <p>&copy; 2026 RouteView. Proyecto de Curso - UTN Sede Central. Desarrollado por Mía & David.</p>
     </div>
   </footer>
 

@@ -62,7 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (ruta.estado === 'Demorado') colorEstado = '#ffc107';
                 if (ruta.estado === 'Fuera de Horario') colorEstado = '#dc3545';
 
-                const listaParadas = ruta.paradas.map(p => `<li>📍 ${p.nombre} (${p.tiempoEstimado} min)</li>`).join('');
+                const listaParadas = ruta.paradas.map(p => `<li>    <img src="../images/icon-parada-pin.svg" alt="" style="width: 18px; height: 18px; flex-shrink: 0;">
+                ${p.nombre} (${p.tiempoEstimado} min)</li>`).join('');
 
                 const tarjeta = document.createElement('div');
                 tarjeta.className = 'tarjeta-ruta';
@@ -82,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </ul>
                     </div>
                     <button class="btn-agregar-fav" data-id="${ruta.id}" style="background: #00C48C; color: white; border: none; padding: 10px; border-radius: 4px; font-weight: bold; cursor: pointer; width: 100%;">
-                        ⭐ Añadir a Favoritos
+                         Añadir a Favoritos
                     </button>
                 `;
                 contenedorCatalogo.appendChild(tarjeta);
@@ -240,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (favoritos.length === 0) {
                 contenedorFavoritas.innerHTML = `
                     <div class="estado-vacio" style="text-align: center; color: #777; padding: 40px 20px;">
-                        <p style="font-size: 3rem; margin-bottom: 10px;">📌</p>
+                        <p style="font-size: 3rem; margin-bottom: 10px;"> <img src="../images/icon-sin-resultados.svg" alt="">  </p>
                         <p>Aún no has registrado rutas personalizadas.</p>
                     </div>`;
                 return;
@@ -255,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 item.innerHTML = `
                     <h3 style="margin: 0 0 5px 0; color: #00C48C; font-size: 1.15rem;">${fav.alias}</h3>
-                    <p style="margin: 0 0 5px 0; font-weight: bold; font-size: 0.9rem;">🚌 ${fav.linea} <span style="font-size:0.75rem; font-weight:normal; background:#cbd5e1; padding: 2px 6px; border-radius:3px; margin-left:5px;">${fav.categoria}</span></p>
+                    <p style="margin: 0 0 5px 0; font-weight: bold; font-size: 0.9rem;"> ${fav.linea} <span style="font-size:0.75rem; font-weight:normal; background:#cbd5e1; padding: 2px 6px; border-radius:3px; margin-left:5px;">${fav.categoria}</span></p>
                     <p style="margin: 0 0 8px 0; font-size: 0.85rem; color: #475569;">📍 <strong>Abordaje:</strong> ${fav.parada}</p>
                     <p style="margin: 0; font-size: 0.85rem; color: #64748b; font-style: italic;">"${fav.descripcion}"</p>
                     <button class="btn-eliminar-individual" data-id="${fav.id}" style="position: absolute; top: 15px; right: 15px; background: none; border: none; color: #dc3545; font-size: 1.1rem; cursor: pointer;" title="Eliminar de favoritos">
@@ -286,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     alert('No hay rutas guardadas para limpiar.');
                     return;
                 }
-                if (confirm('⚠️ ¿AVISO CRÍTICO?\n¿Desea borrar permanentemente TODAS sus rutas guardadas?')) {
+                if (confirm('¿AVISO CRÍTICO?\n¿Desea borrar permanentemente TODAS sus rutas guardadas?')) {
                     localStorage.removeItem('misRutasFavoritas');
                     cargarFavoritosDOM();
                 }
