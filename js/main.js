@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (ruta.estado === 'Demorado') colorEstado = '#ffc107';
                 if (ruta.estado === 'Fuera de Horario') colorEstado = '#dc3545';
 
-                const listaParadas = ruta.paradas.map(p => `<li>    <img src="../images/icon-parada-pin.svg" alt="" style="width: 18px; height: 18px; flex-shrink: 0;">
+                const listaParadas = ruta.paradas.map(p => `<li> <img src="../images/icon-parada-pin.svg" alt="" style="width: 18px; height: 18px; flex-shrink: 0;">
                 ${p.nombre} (${p.tiempoEstimado} min)</li>`).join('');
 
                 const tarjeta = document.createElement('div');
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.innerHTML = `
                     <h3 style="margin: 0 0 5px 0; color: #00C48C; font-size: 1.15rem;">${fav.alias}</h3>
                     <p style="margin: 0 0 5px 0; font-weight: bold; font-size: 0.9rem;"> ${fav.linea} <span style="font-size:0.75rem; font-weight:normal; background:#cbd5e1; padding: 2px 6px; border-radius:3px; margin-left:5px;">${fav.categoria}</span></p>
-                    <p style="margin: 0 0 8px 0; font-size: 0.85rem; color: #475569;">📍 <strong>Abordaje:</strong> ${fav.parada}</p>
+                    <p style="margin: 0 0 8px 0; font-size: 0.85rem; color: #475569;"> <img src="../images/icon-parada-pin.svg" alt="" style="width: 18px; height: 18px; flex-shrink: 0;"> <strong>Abordaje:</strong> ${fav.parada}</p>
                     <p style="margin: 0; font-size: 0.85rem; color: #64748b; font-style: italic;">"${fav.descripcion}"</p>
                     <button class="btn-eliminar-individual" data-id="${fav.id}" style="position: absolute; top: 15px; right: 15px; background: none; border: none; color: #dc3545; font-size: 1.1rem; cursor: pointer;" title="Eliminar de favoritos">
                         ❌
